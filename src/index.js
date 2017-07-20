@@ -8,7 +8,7 @@ import storeFactory from './store/'
 import sampleData from './initialState.json'
 //Import Main Component
 import App from './components/App/'
-
+import { BrowserRouter } from 'react-router-dom'
 
 //Setting up load data and save state
 const initialState = (localStorage['app-store']) ? JSON.parse(localStorage['app-store']) : sampleData
@@ -21,9 +21,11 @@ window.store = store
 
 
 
-//Renders your app, wrapped in a provider, for hooking up your store to the app
+//Renders your app, wrapped in a provider, for hooking up your store to the app, as well as a router for navigation purposes
 render(
     <Provider store={store}>
-        <App/>
+        <BrowserRouter>
+            <App/>
+        </BrowserRouter>
     </Provider>
 , document.getElementById('react-container'))
