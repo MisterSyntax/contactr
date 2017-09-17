@@ -5,7 +5,9 @@
 
 const constants = {
     ENABLE: 'ENABLE',
-    DISABLE: 'DISABLE'
+    DISABLE: 'DISABLE',
+    ADD_USER: 'ADD_USER',
+    REMOVE_USER: 'REMOVE_USER'
 }
 
 export default constants;

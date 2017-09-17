@@ -21,6 +21,21 @@ export const enable = (state = false, action) => {
     }
 }
 
+export const contacts = (state = [], action) => {
+    switch(action.type){
+        case C.ADD_USER: {
+            return [...state, action.payload]
+        }
+        case C.REMOVE_USER: {
+            return state.filter(curr=>curr.id !== action.payload)
+        }
+        default: {
+            return state;
+        }
+    }
+}
+
 export default combineReducers({
-    enable
-})
+    enable,
+    contacts
+});

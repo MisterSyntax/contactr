@@ -1,3 +1,15 @@
 {
-    "enable" : false
+    "enable": false,
+    "contacts": [
+        {
+            "name": "John",
+            "description": "a doe rabbler",
+            "id": 1001
+        },
+        {
+            "name": "Jimmy",
+            "description": "Best corn cracker around",
+            "id": 1002
+        }
+    ]
 }

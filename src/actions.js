@@ -19,3 +19,20 @@ export const disableContent = () => {
         type: C.DISABLE
     }
 }
+
+export const addUser = user => {
+    let date = new Date();
+    let id = date.getTime();
+    user.id = id;
+    return {
+        type: C.ADD_USER,
+        payload: user
+    }
+}
+
+export const removeUser = id => {
+    return {
+        type: C.REMOVE_USER,
+        payload: id
+    }
+}
